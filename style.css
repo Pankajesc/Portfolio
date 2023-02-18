@@ -1,0 +1,459 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Great+Vibes&family=Merriweather:wght@400;700&family=Roboto+Slab:wght@400;700&family=Satisfy&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+:root {
+    --primary-text-color: rgb(165, 240, 255);
+    --secondary-text-color: rgb(73, 107, 114);
+    --inline-section-padding: 0 20px;
+}
+
+.container {
+    max-width: 1300px;
+    padding: 0 60px;
+    margin: auto;
+}
+
+section {
+    padding: 85px 0;
+}
+
+.navbar {
+    position: fixed;
+    padding: 5px 0;
+    z-index: 100;
+    width: 100%;
+    font-family: 'Roboto Slab', serif;
+    transition: all 1s ease;
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 3rem;
+}
+
+.logo span {
+    font-size: 3rem;
+    color: var(--primary-text-color);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.navbar.sticky{
+    padding: 5px 0;
+    background:var(--secondary-text-color);
+}
+
+.navbar.sticky .logo a span{
+    color: #fff;
+}
+
+.nav-menu li {
+    display: inline-block;
+    padding: 0 20px;
+    list-style: none;
+    font-size: 1.2rem;
+}
+
+.nav-menu li a {
+    color: white;
+    display: block;
+    text-decoration: none;
+    transition: all .5s ease-in-out;
+}
+
+.nav-menu li a:hover {
+    color: var(--primary-text-color);
+}
+
+.home {
+    display: flex;
+    background: url(./img/home.jpg)no-repeat center center;
+    color: #ffff;
+    height: 100vh;
+    background-size: cover;
+    min-height: 500px;
+    background-attachment: fixed;
+}
+
+.home .container {
+    width: 100%;
+}
+
+.home-content {
+    font-family: 'Roboto Slab', serif;
+
+}
+
+.home-content .text-1 {
+    font-size: 3rem;
+    margin-bottom: 5px;
+}
+
+.home-content .text-2 {
+    font-size: 3rem;
+    margin-bottom: 5px;
+}
+
+.home-content .text-3 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.home-content .text-3 span {
+    color: var(--primary-text-color);
+}
+
+.btn {
+    border: 2px solid var(--secondary-text-color);
+    padding: 10px 25px;
+    color: rgb(236, 236, 236);
+    font-weight: 500;
+    font-family: 'Merriweather', serif;
+    border-radius: 8px;
+    font-size: 1.3rem;
+    background-color: var(--secondary-text-color);
+    transition: all .4s ease-in-out;
+}
+
+.btn:hover {
+    color: var(--primary-text-color);
+    background-color: black;
+    box-shadow: 1px 1px 10px 1px cyan;
+    cursor: pointer;
+}
+
+.about .container {
+    width: 100%;
+}
+
+
+.about .container .text {
+    color: #ffff;
+    position: relative;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    font-family: 'Merriweather', serif;
+    text-align: center;
+}
+
+.about .container .text::after {
+    content: "Good things happen to those who hustle...";
+    position: absolute;
+    font-size: 20px;
+    color: #ffff;
+    bottom: -20px;
+    margin-bottom: 10px;
+    font-family: 'Great Vibes', cursive;
+    transform: translateX(-75%);
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.about .container .text span {
+    color: var(--primary-text-color);
+}
+
+.about .container .about-content {
+    display: flex;
+    gap: 80px;
+}
+
+.about .container .left img {
+    width: 500px;
+    height: 500px;
+    margin-top: 30px;
+    transition: all .4s ease-in-out
+}
+
+.about .container .left img:hover {
+    cursor: pointer;
+}
+
+.about .container .right {
+    color: white;
+    margin-top: 30px;
+}
+
+.about .container .right span {
+    font-size: 2rem;
+}
+
+.about .container .right span .com {
+    color: var(--primary-text-color);
+}
+
+.about .container .right .right-heading {
+    font-size: 2rem;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-family: 'Roboto Slab', serif;
+}
+
+.about .container .right .right-heading span {
+    color: var(--primary-text-color);
+}
+
+.about .container .right p {
+    font-size: 1.2rem;
+    font-family: 'Abel', sans-serif;
+    text-align: justify;
+    line-height: 25px;
+    margin-bottom: 30px;
+}
+
+.skills .container {
+    width: 100%;
+}
+
+.skills .container .s-heading {
+    font-weight: 600;
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 20px;
+    font-size: 3rem;
+    color: var(--primary-text-color);
+    text-align: center;
+}
+
+.skills .container .s-heading::after {
+    content: "Whatever you are, be a good one.";
+    color: #ffff;
+    font-size: 30px;
+    font-weight: 300;
+    position: absolute;
+    transform: translateX(-71%);
+    font-family: 'Great Vibes', cursive;
+    top: 60px;
+    margin-bottom: 30px;
+}
+
+.skill-content {
+    display: flex;
+    gap: 10px;
+}
+
+.skill-content .card {
+    background: rgb(0, 0, 0);
+    border-radius: 6px;
+    margin-top: 50px;
+    border: 1px solid black;
+    padding: 15px 15px;
+    text-align: center;
+    position: relative;
+    height: 325px;
+    width: 600px;
+    overflow: hidden;
+    transition: all 0.49s ease-in-out;
+}
+
+.skill-content .card:hover {
+    transform: translateY(-10%);
+    background: var(--primary-text-color);
+    cursor: pointer;
+}
+
+.skill-content .card .box:hover {
+    color: rgb(0, 0, 0);
+}
+
+.skill-content .card .box img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    margin-bottom: 3px;
+    object-fit: cover;
+}
+
+.skill-content .card .box h3 {
+    font-size: 1.5rem;
+    margin-bottom: 9px;
+}
+
+.skill-content .card .box {
+    color: #ffff;
+
+}
+
+.skill-content .card .box p {
+    font-family: 'Abel', sans-serif;
+}
+
+.contact .container {
+    width: 100%;
+}
+
+.contact .container .c-heading {
+    color: var(--primary-text-color);
+    font-size: 2.8rem;
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.contact .container .c-heading::after {
+    content: "With Me";
+    color: white;
+    position: absolute;
+    font-family: 'Great Vibes', cursive;
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 30px;
+    transform: translateX(-157%);
+    top: 70px;
+}
+
+.contact .container .contact-content {
+    display: flex;
+    flex-basis: 50%;
+    gap: 35%;
+
+}
+
+
+.contact .container .contact-content .left {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact .container .contact-content .left h1{
+    color: #fff;
+    margin-top: 80px;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.contact .contact-content .left .icons{
+    margin: 10px 0;
+}
+.contact .contact-content .row{
+    display: flex;
+    height: 65px;
+    align-items: center;
+}
+.contact .contact-content .row .info{
+    margin-left: 30px;
+}
+.contact .contact-content .row i{
+    font-size: 25px;
+    color: var(--secondary-text-color);
+}
+.contact .contact-content .info .head{
+    font-weight: 500;
+    color: var(--primary-text-color);
+    margin-bottom: 3px;
+}
+.contact .contact-content .info .sub-title{
+    color: rgb(184, 184, 184);
+}
+
+.contact .container .contact-content .left .left-content {
+    display: flex;
+    gap: 20px;
+}
+
+.contact .container .contact-content .left h2 {
+    color: #ffff;
+    font-size: 1.4rem;
+    margin-top: 50px;
+    margin-bottom: 15px;
+
+}
+
+.contact .container .contact-content .left h2 span{
+    color: var(--primary-text-color);
+}
+
+.contact .container .contact-content .left .left-content a {
+    font-size: 1.4rem;
+    color: var(--secondary-text-color);
+    background: transparent;
+    transition: all .4s ease-in-out;
+}
+
+.contact .container .contact-content .left .left-content a:hover {
+    color: var(--primary-text-color);
+    transform: scale(1.05);
+}
+
+
+.contact .container .contact-content .right {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+.contact .container .contact-content .right .msg {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 65px;
+    margin-bottom: 10px;
+    font-family: 'popins';
+}
+
+
+.contact .container .contact-content .right form .name-area{
+    display: flex;
+    width: 100%;
+    gap: 22px;
+}
+
+.contact .container .contact-content .right form input {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    height: 43px;
+    width: 100%;
+    padding: 5px 15px;
+    border: 2px solid rgb(91, 255, 255);
+    border-radius: 10px;
+}
+
+.contact .container .contact-content .right form input[type="text"]{
+    display: block;
+
+}
+
+.contact .container .contact-content .right textarea {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    width: 100%;
+    padding: 10px 15px;
+    border: 2px solid rgb(119, 250, 250);
+    border-radius: 10px;
+}
+
+footer{
+    color: #ffff;
+    text-align: center;
+    height: 100%;
+    background: #212121;
+    padding-block: 30px;
+    margin-right: 10px;
+}
+
+footer span{
+    font-size: 1.2rem;
+}
+
+footer .editor{
+    color: var(--primary-text-color);
+}
